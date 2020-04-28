@@ -35,6 +35,18 @@ export default {
   flex-direction: column;
 }
 .nav-bar {
+  &::before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #ededed;
+  color: #ededed;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -68,19 +80,6 @@ export default {
       }
     }
   }
-}
-
-.nav-bar:before {
-  content: ' ';
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 1px;
-  border-top: 1px solid #ededed;
-  color: #ededed;
-  transform-origin: 0 0;
-  transform: scaleY(0.5);
 }
 
 .nav-bar li a span {

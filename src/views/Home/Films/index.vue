@@ -6,11 +6,15 @@
           <li
             class=""
             style="width: 50%;"
-          ><span>正在热映</span></li>
+          >
+          <router-link to='home/films/now' />
+          <span>正在热映</span></li>
           <li
             class="active"
             style="width: 50%;"
-          ><span>即将上映</span></li>
+          >
+          <router-link to='home/films/comming' />
+          <span>即将上映</span></li>
           <div
             class="tab-ink-bar-wrapper"
             style="transform: translate3d(100%, 0px, 0px); width: 50%;"
