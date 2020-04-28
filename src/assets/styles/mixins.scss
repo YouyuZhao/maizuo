@@ -1,0 +1,14 @@
+@mixin border-bottom {
+  &::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #ededed;
+    color: #ededed;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+  }
+}
