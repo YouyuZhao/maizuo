@@ -56,7 +56,6 @@ export default {
     list-style: none;
   }
   .tabs-bar {
-    @include border-bottom;
     height: 49px;
     display: flex;
     align-items: center;
@@ -64,6 +63,7 @@ export default {
     overflow-y: hidden;
     transition: transform 0.2s cubic-bezier(0.35, 0, 0.25, 1);
     position: relative;
+    @include border-bottom;
     .tabs-nav {
       display: flex;
       justify-content: center;
