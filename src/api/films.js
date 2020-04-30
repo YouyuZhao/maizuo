@@ -18,3 +18,18 @@ export const getFilms = () => {
     }
   })
 }
+
+// 获取banner列表
+export const getBanner = () => {
+  // return 的是接口调用之后axios返回的promise对象
+  return request({
+    url: '/mhd/comic_v2/getproad',
+    method: 'GET',
+    params: {
+      apptype: 8,
+      appversion: 1.0,
+      channel: 'web - app',
+      adgroupid: 123
+    }
+  })
+}

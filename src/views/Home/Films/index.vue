@@ -1,5 +1,14 @@
 <template>
   <div class='films'>
+    <!-- 轮播图begin -->
+    <Swiper class='mySwiper'>
+      <SwiperItem><img src='../../../assets/icon/films.png' /></SwiperItem>
+      <SwiperItem>2</SwiperItem>
+      <SwiperItem>3</SwiperItem>
+    </Swiper>
+    <!-- 轮播图end -->
+
+    <!-- tabs-bar-begin -->
     <div class="tabs-bar-wrapper">
       <div class="tabs-bar">
         <ul class="tabs-nav">
@@ -7,14 +16,14 @@
             class=""
             style="width: 50%;"
           >
-          <router-link to='home/films/now' />
-          <span>正在热映</span></li>
+            <router-link to='home/films/now' />
+            <span>正在热映</span></li>
           <li
             class="active"
             style="width: 50%;"
           >
-          <router-link to='home/films/comming' />
-          <span>即将上映</span></li>
+            <router-link to='home/films/comming' />
+            <span>即将上映</span></li>
           <div
             class="tab-ink-bar-wrapper"
             style="transform: translate3d(100%, 0px, 0px); width: 50%;"
@@ -25,14 +34,21 @@
         </ul>
       </div>
     </div>
-
+    <!-- tabs-bar-end -->
     <router-view />
   </div>
 </template>
 
 <script>
+// 引入swiper核心与样式
+import { Swiper, SwiperItem } from '@/components/Swiper'
+
 export default {
-  name: 'Films'
+  name: 'Films',
+  components: {
+    Swiper,
+    SwiperItem
+  }
 }
 </script>
 
