@@ -1,10 +1,14 @@
 <template>
   <div class='films'>
     <!-- 轮播图begin -->
-    <Swiper class='mySwiper'>
-      <SwiperItem><img src='../../../assets/icon/films.png' /></SwiperItem>
-      <SwiperItem>2</SwiperItem>
-      <SwiperItem>3</SwiperItem>
+    <Swiper
+      class='mySwiper'
+      v-if='bannerList.length>0'
+    >
+      <SwiperItem
+        v-for='item in bannerList'
+        :key='item.id'
+      ><img :src='item.imageurl' /></SwiperItem>
     </Swiper>
     <!-- 轮播图end -->
 
@@ -42,12 +46,32 @@
 <script>
 // 引入swiper核心与样式
 import { Swiper, SwiperItem } from '@/components/Swiper'
+import { getBanner } from '@/api/films'
 
 export default {
   name: 'Films',
   components: {
     Swiper,
     SwiperItem
+  },
+  data () {
+    return {
+      bannerList: []
+    }
+  },
+  created () {
+    getBanner().then(res => {
+      // console.log(res.info)
+      if (res.code === 200) {
+        console.log(res.info)
+        this.bannerList = res.info
+      } else {
+        alert('数据请求错误')
+      }
+    }).catch(err => {
+      console.log(err)
+      alert('网络有延迟')
+    })
   }
 }
 </script>

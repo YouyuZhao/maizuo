@@ -15,7 +15,9 @@ import 'swiper/css/swiper.css'
 export default {
   name: 'Swiper',
   mounted () {
-    var mySwiper = new Swiper('.swiper-container', {  // eslint-disable-line
+    // console.log(this.$refs.swiper)
+    console.log(this.$el)
+    var mySwiper = new Swiper(this.$el, {  // eslint-disable-line
       loop: true, // 循环模式选项
       autoplay: true,
       // 如果需要分页器
@@ -28,9 +30,15 @@ export default {
 </script>
 
 <style lang='scss'>
+@import '@/assets/styles/mixins.scss';
+
 .swiper-container {
   width: 100%;
   height: 193px;
   --swiper-pagination-color: #ff0000;
+  @include border-bottom;
+  img {
+    width: 100%;
+  }
 }
 </style>
