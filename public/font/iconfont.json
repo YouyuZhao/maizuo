@@ -1,0 +1,51 @@
+{
+  "id": "1574598",
+  "name": "yidong",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "683710",
+      "name": "sou-suo",
+      "font_class": "search",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "796827",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "848667",
+      "name": "dianzan",
+      "font_class": "zan",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "1136104",
+      "name": "会话管理",
+      "font_class": "huihuaguanli",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "2261659",
+      "name": "历史",
+      "font_class": "history",
+      "unicode": "e81d",
+      "unicode_decimal": 59421
+    },
+    {
+      "icon_id": "8622860",
+      "name": "shoucang",
+      "font_class": "shoucang",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    }
+  ]
+}

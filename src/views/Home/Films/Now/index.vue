@@ -55,6 +55,7 @@ export default {
 
 <style lang='scss' scoped>
 .now {
+  // overflow-y: hidden;
   .now-films li {
     box-sizing: border-box;
     padding: 15px;
@@ -89,7 +90,7 @@ export default {
         .p2 {
           font-size: 14px;
           color: #797d82;
-          line-height:20px;
+          line-height: 20px;
         }
       }
     }
