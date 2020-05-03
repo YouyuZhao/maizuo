@@ -1,33 +1,24 @@
 <template>
   <div class='now'>
-    <ul class='now-films'>
-      <li
-        v-for='item in nowfilmsList'
-        :key='item.bigbook_id'
-      >
-        <a>
-          <div class='nowImg'>
-            <img :src='item.coverurl' />
-          </div>
-          <div class='nowInfo'>
-            <p class='p1'>{{item.bigbook_name}}</p>
-            <p class='p2'>{{item.bigbook_author}}</p>
-          </div>
-          <div class='buy'>
-            <button>购买</button>
-          </div>
-        </a>
-      </li>
-    </ul>
+    <Films
+      v-for='item in nowfilmsList'
+      :key='item.bigbook_id'
+      :filmsList='item'
+    ></Films>
     <div class='nomore'>-无更多电影-</div>
   </div>
 </template>
 
 <script>
 import { getFilms } from '@/api/films'
+// 引入组件
+import Films from '@/components/Films'
+
 export default {
   name: 'Now',
-
+  components: {
+    Films
+  },
   data () {
     return {
       nowfilmsList: []
@@ -54,47 +45,12 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+// 引入公共的mixin
+@import '@/assets/styles/mixins.scss';
+
 .now {
-  // overflow-y: hidden;
-  .now-films li {
-    box-sizing: border-box;
-    padding: 15px;
-    a {
-      justify-content: center;
-      align-items: center;
-      height: 124px;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      background: #fff;
-      .nowImg {
-        width: 66px;
-        height: 90.83px;
-        img {
-          width: 100%;
-        }
-      }
-      .nowInfo {
-        width: 230px;
-        height: 81px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        box-sizing: border-box;
-        padding: 0 10px;
-        .p1 {
-          font-size: 16px;
-          color: #191a1b;
-          line-height: 30px;
-        }
-        .p2 {
-          font-size: 14px;
-          color: #797d82;
-          line-height: 20px;
-        }
-      }
-    }
-  }
+  overflow-y: auto;
+  flex: 1;
   .nomore {
     height: 59px;
     background-color: #ededed;

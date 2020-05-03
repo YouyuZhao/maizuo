@@ -59,12 +59,7 @@ export default {
 .films {
   height: 100%;
   display: flex;
-  flex-direction: column;
-
-  .now {
-    flex: 1;
-    overflow-y: auto;
-  }
+  flex-direction: column
 }
 
 // .tabs-bar-wrapper .tabs-bar .tabs-nav li.active {
