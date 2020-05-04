@@ -6,14 +6,18 @@
           class=""
           style="width: 50%;"
         >
-          <router-link to='home/films/now' />
-          <span>正在热映</span></li>
+          <router-link to='now'>
+            <span>正在热映</span>
+          </router-link>
+        </li>
         <li
           class="active"
           style="width: 50%;"
         >
-          <router-link to='home/films/comming' />
-          <span>即将上映</span></li>
+          <router-link to='comming'>
+            <span>即将上映</span>
+          </router-link>
+        </li>
         <div
           class="tab-ink-bar-wrapper"
           style="transform: translate3d(100%, 0px, 0px); width: 50%;"
@@ -42,14 +46,15 @@ export default {
   width: 100%;
   overflow-x: hidden;
   background: #fff;
-  a {
-    text-decoration: none;
-  }
   ul,
   li {
     margin: 0;
     padding: 0;
     list-style: none;
+    a {
+      text-decoration: none;
+      color: #191a1b;
+    }
   }
   .tabs-bar {
     height: 49px;

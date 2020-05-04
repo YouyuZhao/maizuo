@@ -3,21 +3,30 @@
     <router-view />
 
     <ul class="nav-bar">
-      <li class="films"><a
-          href="#/films/now"
-          class=""
-        ><img src="../../assets/icon/films.png">
+      <li class="films">
+        <router-link to='/home/films'>
+          <img src="../../assets/icon/films.png">
           <span>电影</span>
-        </a></li>
-      <li class="cinemas"><a href="#/cinemas"><img src="../../assets/icon/cinemas.png">
+        </router-link>
+      </li>
+      <li class="cinemas">
+        <router-link to='/home/cinemas'>
+        <img src="../../assets/icon/cinemas.png">
           <span>影院</span>
-        </a></li>
-      <li class="uugroupon"><a href="https://m.maizuo.com/uriredirect/"><img src="../../assets/icon/zixun.png">
+        </router-link>
+      </li>
+      <li class="uugroupon">
+        <a href="https://m.maizuo.com/uriredirect/">
+          <img src="../../assets/icon/zixun.png">
           <span>资讯</span>
-        </a></li>
-      <li class="center"><a href="#/center"><img src="../../assets/icon/my.png">
+        </a>
+      </li>
+      <li class="center">
+        <router-link to='/home/my'>
+          <img src="../../assets/icon/my.png">
           <span>我的</span>
-        </a></li>
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
