@@ -10,5 +10,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang='scss' scoped>
+.my {
+  flex: 1;
+  overflow-y: auto;
+}
 </style>

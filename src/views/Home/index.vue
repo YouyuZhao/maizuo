@@ -11,7 +11,7 @@
       </li>
       <li class="cinemas">
         <router-link to='/home/cinemas'>
-        <img src="../../assets/icon/cinemas.png">
+          <img src="../../assets/icon/cinemas.png">
           <span>影院</span>
         </router-link>
       </li>
@@ -47,6 +47,7 @@ export default {
     overflow-y: auto;
   }
   .nav-bar {
+    position: relative;
     &::before {
       content: ' ';
       position: absolute;
